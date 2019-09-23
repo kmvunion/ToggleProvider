@@ -1,0 +1,10 @@
+{
+  "feature": {
+    "toggles": {
+      "feature1": true,
+      "feature2": false,
+      "feature3": true
+    },
+    "otherData":  "Some other Data"
+  }
+}
