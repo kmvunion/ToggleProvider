@@ -24,7 +24,7 @@ namespace KMV.ToggleProvider.Providers
             using (JsonTextReader reader = new JsonTextReader(file))
             {
                 JObject togglesHolderObject = (JObject)JToken.ReadFrom(reader);
-                var toggleSection = togglesHolderObject.SelectToken(_configuration.ToggleSection);
+                var toggleSection = togglesHolderObject.SelectToken(_configuration.SectionPath);
 
                 _toggles = JsonConvert.DeserializeObject<Dictionary<string, bool>>(toggleSection.ToString());
             }

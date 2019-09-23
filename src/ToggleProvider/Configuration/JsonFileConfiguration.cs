@@ -4,7 +4,7 @@ namespace KMV.ToggleProvider.Configuration
 {
     public class JsonFileConfiguration : BaseConfiguration, IJsonFileConfiguration
     {
-        public string ToggleSection { get; private set; }
+        public string SectionPath { get; private set; }
         public string FilePath { get; private set; }
 
         public JsonFileConfiguration(string filePath) : base()
@@ -20,9 +20,9 @@ namespace KMV.ToggleProvider.Configuration
             FilePath = filePath;
         }
 
-        public JsonFileConfiguration AddToggleSection(string section)
+        public JsonFileConfiguration AddToggleSection(string sectionPath)
         {
-            ToggleSection = section;
+            SectionPath = sectionPath;
             return this;
         }
     }
