@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace KMV.ToggleProvider.Providers
 {
-    public class JsonToggleProvider : BaseToggleProvider<JsonConfiguration>
+    public class JsonFileToggleProvider : BaseToggleProvider<JsonFileConfiguration>
     {
 
-        public JsonToggleProvider(JsonConfiguration configuration) : base(configuration)
+        public JsonFileToggleProvider(JsonFileConfiguration configuration) : base(configuration)
         {
         }
 

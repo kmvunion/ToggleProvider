@@ -9,4 +9,13 @@
     <ProjectReference Include="..\..\..\src\ToggleProvider\KMV.ToggleProvider.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ToggleJSONConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ToggleXML.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

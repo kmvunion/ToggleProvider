@@ -1,5 +1,4 @@
-﻿using KMV.ToggleProvider.Configuration;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace KMV.ToggleProvider
 {

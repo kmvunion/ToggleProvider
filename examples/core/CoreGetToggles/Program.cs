@@ -2,6 +2,7 @@
 using KMV.ToggleProvider.Providers;
 using KMV.ToggleProvider.Configuration;
 using System;
+using System.IO;
 
 namespace UseTogglesCore
 {
@@ -18,10 +19,10 @@ namespace UseTogglesCore
 
         private static void UseAppsetingJsonToggleConfiguration()
         {
-            var path = @"E:\Projects\ToggleProvider\examples\core\CoreGetToggles\ToggleJSONConfig.json";
+            var path = Path.Combine(Environment.CurrentDirectory, @"ToggleJSONConfig.json");
 
-            IToggleProvider provider = new JsonToggleProvider(
-                new JsonConfiguration(path,false,false,true)                
+            IToggleProvider provider = new JsonFileToggleProvider(
+                new JsonFileConfiguration(path, false, false, true)
                 .AddToggleSection("feature.toggles"));
 
             PrintToggle("feature1", provider);
