@@ -54,6 +54,5 @@ namespace KMV.ToggleProvider.Providers
         }        
 
         protected abstract Task LoadTogglesAsync();
-
     }
 }

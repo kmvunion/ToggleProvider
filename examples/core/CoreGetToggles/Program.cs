@@ -23,7 +23,7 @@ namespace UseTogglesCore
 
             IToggleProvider provider = new JsonFileToggleProvider(
                 new JsonFileConfiguration(path, false, false, true)
-                .AddToggleSection("feature.toggles"));
+                .AddToggleSectionPath("feature.toggles"));
 
             PrintToggle("feature1", provider);
             PrintToggle("feature2", provider);

@@ -4,6 +4,6 @@ namespace KMV.ToggleProvider.Interfaces
 {
     public interface IJsonFileConfiguration: IBaseToggleConfiguration
     {
-        JsonFileConfiguration AddToggleSection(string sectionPath);
+        JsonFileConfiguration AddToggleSectionPath(string sectionPath);
     }
 }

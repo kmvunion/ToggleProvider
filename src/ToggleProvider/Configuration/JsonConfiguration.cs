@@ -9,7 +9,7 @@ namespace KMV.ToggleProvider.Configuration
         public JsonConfiguration(string toggleSection,
            bool isAcvtiveReload = false,
            bool defaultToggleFlag = false,
-           bool useDefaultToggleFlag = false) : base(isAcvtiveReload, defaultToggleFlag, useDefaultToggleFlag)
+           bool useDefaultToggleFlag = true) : base(isAcvtiveReload, defaultToggleFlag, useDefaultToggleFlag)
         {
             ToggleSection = toggleSection;
         }

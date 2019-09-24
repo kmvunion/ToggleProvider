@@ -10,13 +10,12 @@ namespace KMV.ToggleProvider.Configuration
 
         public bool UseDefaultToggleFlag { get; set; } 
 
-        protected BaseConfiguration(bool isAcvtiveReload = false, bool defaultToggleFlag = false, bool useDefaultToggleFlag = false)
+        protected BaseConfiguration(bool isAcvtiveReload = false, bool defaultToggleFlag = false, bool useDefaultToggleFlag = true)
         {
             IsAcvtiveReload = isAcvtiveReload;
             DefaultToggleFlag = defaultToggleFlag;
             UseDefaultToggleFlag = useDefaultToggleFlag;
         }
-
 
         public virtual void SetAcvtiveReload(bool value = true)
         {

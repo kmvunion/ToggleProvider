@@ -12,8 +12,11 @@ namespace KMV.ToggleProvider.Providers
         }
 
         protected override async Task LoadTogglesAsync()
-        {            
-            _toggles = JsonConvert.DeserializeObject<Dictionary<string, bool>>(_configuration.ToggleSection);
+        {
+            _toggles = Task.Run(() =>
+            {
+                return JsonConvert.DeserializeObject<Dictionary<string, bool>>(_configuration.ToggleSection);
+            }).Result;
         }
     }
 }

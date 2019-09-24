@@ -15,14 +15,20 @@ namespace KMV.ToggleProvider.Configuration
         public JsonFileConfiguration(string filePath,
             bool isAcvtiveReload = false,
             bool defaultToggleFlag = false,
-            bool useDefaultToggleFlag = false) : base(isAcvtiveReload, defaultToggleFlag, useDefaultToggleFlag)
+            bool useDefaultToggleFlag = true) : base(isAcvtiveReload, defaultToggleFlag, useDefaultToggleFlag)
         {
             FilePath = filePath;
         }
 
-        public JsonFileConfiguration AddToggleSection(string sectionPath)
+        public JsonFileConfiguration AddToggleSectionPath(string sectionPath)
         {
             SectionPath = sectionPath;
+            return this;
+        }
+
+        public JsonFileConfiguration AddToggleFilePath(string filePath)
+        {
+            FilePath = filePath;
             return this;
         }
     }
