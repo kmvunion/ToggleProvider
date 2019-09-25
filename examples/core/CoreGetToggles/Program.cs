@@ -29,6 +29,7 @@ namespace UseTogglesCore
             PrintToggle("feature2", provider);
             PrintToggle("feature3", provider);
             PrintToggle("feature4", provider);
+
         }
 
         private static void PrintToggle(string featureName, IToggleProvider provider)
